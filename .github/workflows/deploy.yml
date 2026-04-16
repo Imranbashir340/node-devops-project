@@ -26,6 +26,11 @@ jobs:
             whoami
             pwd
 
+            if [ ! -d ~/app ]; then
+              echo "Cloning repo"
+              git clone https://github.com/Imranbashir340/node-devops-project.git ~/app
+            fi
+
             cd ~/app || exit 1
 
             echo "Pulling code"
